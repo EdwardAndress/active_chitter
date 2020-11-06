@@ -18,3 +18,7 @@ Do these things
 * `ruby app.rb`
 
 Then go to [localhost:4567](http://localhost:4567) and start cheeping!
+
+## Hang on, what's that rake thing??
+
+[Rake is a task runner](https://www.rubyguides.com/2019/02/ruby-rake/) and a 'task' in this case is going to be something you'll do repeateadly, as part of building and using your app, such as migrating or dropping your database.  Ultimately though, you can turn pretty much anything into a rake task if you really want to.
