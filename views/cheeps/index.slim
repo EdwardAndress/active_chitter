@@ -1,8 +1,9 @@
 h1 Cheep cheep
-ul
-  - @cheeps.each do |cheep|
-    li = cheep.body
 
 form action='/cheeps' method='post'
   input type='text' name='body'
   input type='submit'
+
+ul
+  - @cheeps.each do |cheep|
+    li = cheep.body

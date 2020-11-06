@@ -7,7 +7,7 @@ class Chitter < Sinatra::Base
   end
 
   get '/cheeps' do
-    @cheeps = Cheep.all
+    @cheeps = Cheep.all.reverse
     slim :'cheeps/index'
   end
 
