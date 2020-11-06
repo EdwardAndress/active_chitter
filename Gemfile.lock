@@ -32,6 +32,10 @@ GEM
     sinatra-activerecord (2.0.21)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    slim (4.1.0)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 2.0.6, < 2.1)
+    temple (0.8.2)
     thread_safe (0.3.6)
     tilt (2.0.10)
     tzinfo (1.2.7)
@@ -47,6 +51,7 @@ DEPENDENCIES
   rake
   sinatra
   sinatra-activerecord
+  slim
 
 BUNDLED WITH
    2.1.4
