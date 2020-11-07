@@ -12,6 +12,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+    bcrypt (3.1.16)
     concurrent-ruby (1.1.7)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
@@ -43,8 +44,6 @@ GEM
     tilt (2.0.10)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
-    warden (1.2.9)
-      rack (>= 2.0.9)
     zeitwerk (2.4.1)
 
 PLATFORMS
@@ -52,6 +51,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  bcrypt
   pg
   rack-flash3
   rake
@@ -59,7 +59,6 @@ DEPENDENCIES
   sinatra-activerecord
   sinatra-initializers
   slim
-  warden
 
 BUNDLED WITH
    2.1.4

@@ -6,4 +6,4 @@ form action='/cheeps' method='post'
 
 ul
   - @cheeps.each do |cheep|
-    li = cheep.body
+    li = cheep.body + ' said ' + cheep.user.email
