@@ -14,10 +14,13 @@ Do these things
 
 * `bundle install`
 * `createdb chitter`
-* `rake db:migrate`
-* `ruby app.rb`
+* `rake db:create db:migrate db:seed`
+* `rackup`
 
-Then go to [localhost:4567](http://localhost:4567) and start cheeping!
+Then go to [localhost:9292](http://localhost:9292) and sign in with these credentials.
+
+* user@email.com
+* 12345678
 
 ## Hang on, what's that rake thing??
 

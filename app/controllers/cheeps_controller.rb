@@ -1,17 +1,10 @@
-require 'sinatra/base'
-require 'sinatra-initializers'
-require_relative '../models/cheep.rb'
+class CheepsController < ApplicationController
 
-class CheepsController < Sinatra::Base
-
-  register Sinatra::Initializers
-
-  configure do
-    set :views, "app/views"
-    set :public_dir, "public"
+  before do
+    authenticate!
   end
-
-  get '/' do 
+  
+  get '/' do
     redirect 'cheeps'
   end
 
@@ -21,8 +14,20 @@ class CheepsController < Sinatra::Base
   end
 
   post '/cheeps' do
-    Cheep.create(params)
+    current_user.cheeps.create(params)
     redirect '/cheeps'
+  end
+
+  private
+
+  def authenticate!
+    unless current_user
+      redirect '/sessions/new'
+    end
+  end
+
+  def current_user
+    User.find(session[:user_id]) if session[:user_id]
   end
 end
 

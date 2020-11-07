@@ -1,3 +1,5 @@
-require_relative './app/controllers/cheeps_controller.rb'
+require_relative './app.rb'
 
-run CheepsController
+use SessionsController
+use CheepsController
+run App
