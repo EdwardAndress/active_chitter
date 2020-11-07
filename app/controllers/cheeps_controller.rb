@@ -1,7 +1,16 @@
 require 'sinatra/base'
-require_relative './models/cheep.rb'
+require 'sinatra-initializers'
+require_relative '../models/cheep.rb'
 
-class Chitter < Sinatra::Base
+class CheepsController < Sinatra::Base
+
+  register Sinatra::Initializers
+
+  configure do
+    set :views, "app/views"
+    set :public_dir, "public"
+  end
+
   get '/' do 
     redirect 'cheeps'
   end
@@ -15,7 +24,5 @@ class Chitter < Sinatra::Base
     Cheep.create(params)
     redirect '/cheeps'
   end
-
-  run! if app_file == $0
 end
 

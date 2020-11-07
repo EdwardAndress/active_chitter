@@ -20,6 +20,8 @@ GEM
       ruby2_keywords (~> 0.0.1)
     pg (1.2.3)
     rack (2.2.3)
+    rack-flash3 (1.0.5)
+      rack
     rack-protection (2.1.0)
       rack
     rake (13.0.1)
@@ -32,6 +34,7 @@ GEM
     sinatra-activerecord (2.0.21)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sinatra-initializers (0.1.4)
     slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -40,6 +43,8 @@ GEM
     tilt (2.0.10)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     zeitwerk (2.4.1)
 
 PLATFORMS
@@ -48,10 +53,13 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   pg
+  rack-flash3
   rake
   sinatra
   sinatra-activerecord
+  sinatra-initializers
   slim
+  warden
 
 BUNDLED WITH
    2.1.4
